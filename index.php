@@ -11,6 +11,16 @@ function add($title, $text, &$array)
  array_push($array, $subArray);
 }
 
-add('djope','ojkjhkjhkjhkjhkjh',$textStorage);
-add('писке','гдппалрпаорпаоап',$textStorage);
-var_dump($textStorage);
+add('djope', 'ojkjhkjhkjhkjhkjh', $textStorage);
+add('писке', 'гдппалрпаорпаоап', $textStorage);
+// var_dump($textStorage);
+//3-----------------------------------------
+function remove($number, &$array)
+{
+ if ($array[$number]) {
+  unset($array[$number]);
+  return true;
+ } else {
+  return false;
+ }
+}
