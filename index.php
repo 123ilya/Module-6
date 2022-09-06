@@ -11,23 +11,26 @@ function add(string $title, string $text, array &$array)
 
 add('tttttttt', 'ojkjhkjhkjhkjhkjh', $textStorage);
 add('rrrrrrrrr', 'гдппалрпаорпаоап', $textStorage);
-var_dump($textStorage);
+//var_dump($textStorage);
 //------------------------------------------------------------------------------------------
 //Функция удаляет элемент из массива.
-function remove(int $number, array &$array)
+function remove(int $index, array &$array)
 {
-    if ($array[$number]) {
-        unset($array[$number]);
+    if (isset($array[$index])) {
+        unset($array[$index]);
         return true;
     } else {
         return false;
     }
 }
 
+//echo remove(1, $textStorage);
+
+//var_dump($textStorage);
 //-------------------------------
 function edit(int $index, string $title, string $text, array &$array)
 {
-    if ($array[$index]) {
+    if (isset($array[$index])) {
         $array[$index]['title'] = $title;
         $array[$index]['text'] = $text;
         return true;
@@ -35,5 +38,7 @@ function edit(int $index, string $title, string $text, array &$array)
         return false;
     }
 }
+
+edit(1, '5555555', 'etgertertererete', $textStorage);
 
 
